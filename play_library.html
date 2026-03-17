@@ -16,12 +16,42 @@
             <a href="#">Comunidad</a>
             <a href="#">Noticias</a>
         </nav>
-        <div class="buscador">
-            <input type="text" placeholder="Buscar en la Biblioteca">
-        </div>
+
+        <div class="search">
+
+<input type="text" placeholder="Buscar juegos">
+
+</div>
+
+<button class="login-btn" onclick="toggleUserMenu()">
+      👤 VALK_SANX
+    </button>
+
+    
+    <div id="userMenu" class="user-menu">
+      <p>Mi cuenta</p>
+      <p>Configuración</p>
+      <p>Cerrar sesión</p>
+    </div>
+
+<script>
+function toggleUserMenu() {
+  const menu = document.getElementById("userMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
+
+
+</div>
+
+       
     </header>
     <main class="library-page">
         <main class="library-page">
+
+             <div class="buscador">
+            <input type="text" placeholder="Buscar en la Biblioteca">
+        </div>
     <section class="hero-library">
         <div class="hero-text">
             <p class="subtitle">Colección personal</p>
@@ -70,7 +100,7 @@
             </article>
 
             <article class="game-card">
-                <img src="img/stardew image.jpg" alt="Stardew Valley">
+                <img src="img/stardew valley.jpg" alt="Stardew Valley">
 
                 <div class="overlay">
                     <h3>Seguir jugando</h3>
@@ -142,10 +172,10 @@
                 </div>
 
                 <div class="game-info">
-                    <span class="estado no-instalado">No instalado</span>
+                    <span class="estado no-instalado">Instalar</span>
                     <h4>THE LEGEND OF ZELDA</h4>
                     <p class="genero">Accion y Aventura</p>
-                    <p class="horas">110 horas jugadas</p>
+                   
                 </div>
             </article>
 
@@ -158,7 +188,7 @@
                 </div>
 
                 <div class="game-info">
-                    <span class="estado no-instalado">No instalado</span>
+                    <span class="estado no-instalado">Instalar</span>
                     <h4>HADES</h4>
                     <p class="genero">Accion-Roguelike</p>
                     

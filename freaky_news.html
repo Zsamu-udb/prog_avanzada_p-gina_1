@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - Videofreaky</title>
+    <link rel="stylesheet" href="play_library.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1 class="logo">VIDEOFREAKY</h1>
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="store.html">Tienda</a>
+            <a href="play_library.html" class="activo">Biblioteca</a>
+            <a href="comuni.html">Comunidad</a>
+            <a href="freaky_news.html">Noticias</a>
+        </nav>
+
+        <div class="search">
+
+<input type="text" placeholder="Buscar juegos">
+
+</div>
+
+<button class="login-btn" onclick="toggleUserMenu()">
+      👤 VALK_SANX
+    </button>
+
+    
+    <div id="userMenu" class="user-menu">
+      <p>Mi cuenta</p>
+      <p>Configuración</p>
+      <p>Cerrar sesión</p>
+    </div>
+
+<script>
+function toggleUserMenu() {
+  const menu = document.getElementById("userMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
+</div>
+</header>
+    <main class="news-page">
+        <main class="news-page">
+            <section class="hero-news">
+        <div class="hero-text">
+            <h2>ULTIMOS ACONTECIMIENTOS</h2>
+
+            <p class="description">
+                Mantente al día con los últimos acontecimientos en el Mundo gamer:
+                Noticias,Lanzamientos y sorpresas que no te puedes perder.
+            </p>
+        </div>
+    </section>
+
