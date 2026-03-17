@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tienda - VideoFreaky</title>
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/store.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="header-container">
+
+<div class="logo">VIDEOFREAKY</div>
+
+<nav class="menu">
+<a href="index.html">Inicio</a>
+<a href="store.html">Tienda</a>
+<a href="#">Biblioteca</a>
+<a href="comuni.html">Comunidad</a>
+<a href="#">Noticias</a>
+</nav>
+
+<div class="search">
+<input type="text" placeholder="Buscar juegos">
+</div>
+
+<button class="login-btn" onclick="toggleUserMenu()">
+      👤 VALK_SANX
+    </button>
+
+    
+    <div id="userMenu" class="user-menu">
+      <p>Mi cuenta</p>
+      <p>Configuración</p>
+      <p>Cerrar sesión</p>
+    </div>
+
+<script>
+function toggleUserMenu() {
+  const menu = document.getElementById("userMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</div>
+</header>
+
+<main class="container">
+    <section class="communi">
+  <h2>Comunidad Freaky</h2>
+<br>
+  <div class="communi-container">
+
+
+    <div class="post">
+      <h3>@Elmascapito3000</h3>
+      <p>¿Cuando sacaran nuevas ofertas? 🔥</p>
+      <div class="actions-post">
+        <button>👍 Me gusta</button>
+        <button>💬 Comentar</button>
+      </div>
+    </div>
+
+   
+    <div class="post">
+      <h3>@choripan</h3>
+      <p>Recomiendo Outlas, está brutal.</p>
+      <div class="actions-post">
+        <button>👍 Me gusta</button>
+        <button>💬 Comentar</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="community">
+
+  
+  <div id="postsContainer" class="community-container">
+  
+  </div>
+<br>
+ 
+  <div class="create-post">
+    <input type="text" id="postInput" placeholder="Escribe algo para la comunidad..." />
+    <button onclick="addPost()">Publicar</button>
+  </div>
+
+</div>
+</main>
+
+
+<footer class="footer">
+VideoFreaky © 2026
+</footer>
+
+</body>
+</html>
+
+
+
+
+

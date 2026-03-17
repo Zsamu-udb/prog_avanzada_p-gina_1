@@ -26,13 +26,31 @@
 <a href="index.html">Inicio</a>
 <a href="store.html">Tienda</a>
 <a href="#">Biblioteca</a>
-<a href="#">Comunidad</a>
+<a href="comuni.html">Comunidad</a>
 <a href="#">Noticias</a>
 </nav>
 
 <div class="search">
 <input type="text" placeholder="Buscar juegos">
 </div>
+
+<button class="login-btn" onclick="toggleUserMenu()">
+      👤 VALK_SANX
+    </button>
+
+    
+    <div id="userMenu" class="user-menu">
+      <p>Mi cuenta</p>
+      <p>Configuración</p>
+      <p>Cerrar sesión</p>
+    </div>
+
+<script>
+function toggleUserMenu() {
+  const menu = document.getElementById("userMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </div>
 
