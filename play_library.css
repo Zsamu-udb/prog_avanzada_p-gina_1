@@ -1,0 +1,260 @@
+:root{
+    --morado-claro:#a855f7;
+    --fondo1:#0a0012;
+    --fondo2:#190028;
+    --fondo3:#240038;
+    --gris-texto:#bdbdbd;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(to bottom, var(--fondo1), var(--fondo2), var(--fondo3));
+    color:rgb(240, 204, 237);
+    min-height:100vh;
+    
+    
+
+
+}
+header {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(15px) saturate(180%);
+    border-bottom: 1px solid rgba(139, 61, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(212, 30, 191, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 25px;
+    background:#08000d;
+}
+
+
+.logo{
+    color:#55aaff;
+    font-size:2rem;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.menu{
+    display:flex;
+    gap:28px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:var(--morado-claro);
+}
+
+.menu .activo{
+    font-weight:bold;
+}
+
+.buscador input{
+    width:210px;
+    padding:9px 12px;
+    border:none;
+    border-radius:6px;
+    outline:none;
+}
+
+
+.library-page{
+    padding:30px 25px 50px;
+}
+
+.hero-library{
+    padding:40px;
+    margin-bottom:40px;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.subtitle{
+    color:#c9a7ff;
+    font-size:0.9rem;
+    margin-bottom:6px;
+}
+
+.hero-text h2{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.description{
+    color:var(--gris-texto);
+    line-height:1.5;
+}
+.collection-section{
+    margin-top:20px;
+}
+
+.collection-section h2{
+    color:var(--morado-claro);
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.library-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:20px;
+}
+
+.game-card{
+    background:#101014;
+    border-radius:14px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:0 6px 16px rgba(0,0,0,0.35);
+    transition:transform 0.35s ease, box-shadow 0.35s ease;
+    z-index:1;
+}
+
+.game-card:hover{
+    transform:scale(1.08);
+    box-shadow:
+        0 14px 30px rgba(0,0,0,0.5),
+        0 0 20px rgba(168,85,247,0.6);
+    z-index:10;
+
+}
+
+.game-card img{
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    display:block;
+    transition:transform 0.35s ease, filter 0.35s ease;
+}
+
+.game-card:hover img{
+    transform:scale(1.06);
+    filter:brightness(1.05);
+}
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:120px;
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0.55),
+        rgba(168,85,247,0.75));
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:15px;
+    opacity:0;
+    transition:0.35s ease;
+}
+
+.game-card:hover .overlay{
+    opacity:1;
+}
+
+.overlay h3{
+    font-size:1.4rem;
+    margin-bottom:6px;
+    color:white;
+}
+
+.overlay p{
+    color:#f3e8ff;
+    font-size:0.95rem;
+}
+
+.game-info{
+    padding:14px;
+}
+
+.game-info h4{
+    margin:10px 0 6px;
+    font-size:1rem;
+    line-height:1.2;
+}
+
+.genero{
+    color:#cda8ff;
+    font-size:0.95rem;
+    margin-bottom:6px;
+}
+
+.horas{
+    color:#9e9e9e;
+    font-size:0.9rem;
+}
+
+.estado{
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:0.8rem;
+    font-weight:bold;
+}
+
+.instalado{
+    background:rgba(46, 204, 113, 0.15);
+    color:#7dffb0;
+    border:1px solid rgba(46,204,113,0.35);
+}
+
+.no-instalado{
+    background:rgba(255, 92, 122, 0.15);
+    color:#ad1b4c;
+    border:1px solid rgba(214, 69, 118, 0.35);
+}
+
+@media (max-width:1100px){
+    .library-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media (max-width:600px){
+    .library-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+.overlay-btn{
+    display:inline-block;
+    background:rgba(255,255,255,0.12);
+    color:white;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:10px;
+    font-weight:bold;
+    font-size:1.1rem;
+    border:1px solid rgba(255,255,255,0.18);
+    transition:all 0.3s ease;
+}
+
+.overlay-btn:hover{
+    background:#a855f7;
+    box-shadow:0 0 20px rgba(168,85,247,0.9);
+    transform:scale(1.05);
+}
