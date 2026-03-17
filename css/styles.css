@@ -364,3 +364,111 @@ transition:0.4s;
 .card:hover .preview{
 opacity:1;
 }
+
+
+/* LOGIN Y COMUNIDAD */
+.login-btn {
+  background: #7c3aed;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #9333ea;
+}
+
+.user-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  background: #1f0037;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.user-menu p {
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.user-menu p:hover {
+  color: #a855f7;
+}
+
+.communi {
+  padding: 40px;
+}
+
+.communi h2 {
+  color: #a855f7;
+}
+
+.communi-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post {
+  background: #140028;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.post h3 {
+  margin: 0;
+  color: #c084fc;
+}
+
+.actions-post {
+  margin-top: 10px;
+}
+
+.actions-post button {
+  margin-right: 10px;
+  background: #7c3aed;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.create-post {
+  display: flex;
+  gap: 5px;
+  max-width: ;
+  margin-bottom: 10px;
+}
+
+.create-post input {
+  flex: 1;
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  background: #2d0358;
+  color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.create-post input::placeholder {
+  color: #aaa;
+}
+
+.create-post button {
+  background: #7c3aed;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+
