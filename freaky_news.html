@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - Videofreaky</title>
+    <link rel="stylesheet" href="freaky_news.css">
+</head>
+<body>
+
+    <header class="navbar">
+       <div class="logo">VIDEOFREAKY</div>
+
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="store.html">Tienda</a>
+            <a href="play_library.html">Biblioteca</a>
+            <a href="comuni.html">Comunidad</a>
+            <a href="freaky_news.html" class="activo">Noticias</a>
+        </nav>
+
+        <div class="search">
+            <input type="text" placeholder="Buscar juegos">
+        </div>
+
+        <button class="login-btn" onclick="toggleUserMenu()">
+            👤 VALK_SANX
+        </button>
+
+        <div id="userMenu" class="user-menu">
+            <p>Mi cuenta</p>
+            <p>Configuración</p>
+            <p>Cerrar sesión</p>
+        </div>
+    </header>
+
+    <main class="news-page">
+
+        <section class="hero-news">
+            <div class="hero-text">
+                <h2>ÚLTIMOS ACONTECIMIENTOS</h2>
+                <p class="description">
+                    Mantente al día con los últimos acontecimientos en el mundo gamer:
+                    noticias, lanzamientos y sorpresas que no te puedes perder.
+                </p>
+            </div>
+        </section>
+
+        <section class="featured-news">
+            <h2>Destacados</h2>
+
+            <div class="featured-card">
+                <div class="featured-image">
+                    <img src="img/gta 5.jpg" alt="GTA VI">
+                </div>
+
+                <div class="featured-info">
+                    <h2>Rockstar confirma avances de GTA VI y aumenta la expectativa mundial</h2>
+                    <p>
+                        Rockstar Games ha confirmado nuevos avances en el desarrollo de Grand Theft Auto VI,
+                        uno de los videojuegos más esperados de la historia. Tras el éxito del primer tráiler,
+                        la comunidad continúa analizando cada detalle mientras crece la expectativa por su lanzamiento.
+                        Se espera que el título incluya un mundo más dinámico, mejoras gráficas importantes y nuevas
+                        mecánicas de juego que marcarían un antes y un después en la industria.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="today-news">
+            <h2>Lo nuevo de hoy</h2>
+
+            <div class="news-grid">
+                <article class="news-card">
+                    <img src="img/Fortnite-Pictures.webp" alt="Fortnite actualización">
+                    <div class="news-info">
+                        <span class="news-tag">Hoy</span>
+                        <h3>Nueva actualización de Fortnite sorprende a los jugadores</h3>
+                        <p>Epic presenta nuevos modos, recompensas y contenido especial.</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="img/ELDENRING_NIGHTREIGN_Key_Art-1620x800.jpg" alt="DLC Elden Ring">
+                    <div class="news-info">
+                        <span class="news-tag">Hoy</span>
+                        <h3>Se filtran detalles del próximo DLC de Elden Ring</h3>
+                        <p>La comunidad ya especula sobre jefes inéditos y nuevas zonas.</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="img/residen evil news.avif" alt="Resident Evil noticia">
+                    <div class="news-info">
+                        <span class="news-tag">Hoy</span>
+                        <h3>Resident Evil prepara contenido especial para este mes</h3>
+                        <p>Capcom adelanta eventos y novedades para los fans de la saga.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="weekly-news">
+            <h2>Novedades de la semana</h2>
+
+            <div class="weekly-list">
+                <article class="weekly-item">
+                    <h3>Steam rompe récord de usuarios conectados</h3>
+                    <p>La plataforma alcanzó una cifra histórica de jugadores simultáneos.</p>
+                </article>
+
+                <article class="weekly-item">
+                    <h3>Nuevo tráiler de Silksong emociona a la comunidad</h3>
+                    <p>El esperado título vuelve a generar expectativa entre los jugadores.</p>
+                </article>
+
+                <article class="weekly-item">
+                    <h3>God of War prepara novedades para su aniversario</h3>
+                    <p>Se esperan anuncios, contenido especial y eventos conmemorativos.</p>
+                </article>
+
+                <article class="weekly-item">
+                    <h3>Minecraft anuncia nuevas herramientas de construcción</h3>
+                    <p>La próxima actualización ampliará la creatividad de los jugadores.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="upcoming-news">
+            <h2>Próximos lanzamientos</h2>
+
+            <div class="launch-grid">
+                <article class="launch-card">
+                    <img src="img/cozy.jpg" alt="Cozy Grove">
+                    <div class="launch-info">
+                        <h3>COZY GROVE</h3>
+                        <p>Lanzamiento estimado: Próximamente</p>
+                    </div>
+                </article>
+
+                <article class="launch-card">
+                    <img src="img/fatal_frame.jpg" alt="Fatal Frame">
+                    <div class="launch-info">
+                        <h3>FATAL FRAME</h3>
+                        <p>Lanzamiento estimado: Este año</p>
+                    </div>
+                </article>
+
+                <article class="launch-card">
+                    <img src="img/header.jpg" alt="Greedfall">
+                    <div class="launch-info">
+                        <h3>GREEDFALL</h3>
+                        <p>Lanzamiento estimado: Próximamente</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function toggleUserMenu() {
+            const menu = document.getElementById("userMenu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
+</body>
+</html>
