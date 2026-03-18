@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Detroit Become Human - VideoFreaky</title>
+
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/game.css">
+<link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="header-container">
+
+<div class="logo">VIDEOFREAKY</div>
+
+<nav class="menu">
+<a href="../index.html">Inicio</a>
+<a href="../store.html">Tienda</a>
+<a href="#">Biblioteca</a>
+<a href="../comuni.html">Comunidad</a>
+<a href="#">Noticias</a>
+</nav>
+
+<div class="search">
+<input type="text" placeholder="Buscar juegos">
+</div>
+
+</div>
+
+</header>
+
+<main class="container game-page">
+
+<h1 class="game-title">Detroit Become Human</h1>
+
+<div class="game-layout">
+
+<div class="game-media">
+
+<div class="media-carousel">
+
+<input type="radio" name="media" id="m1" checked>
+<input type="radio" name="media" id="m2">
+<input type="radio" name="media" id="m3">
+<input type="radio" name="media" id="m4">
+
+<div class="media-slides">
+
+<div class="slide">
+<video controls preload="metadata">
+<source src="../VIDEO-GAMES/Detroit_ Become Human  - Tráiler en Castellano.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="slide">
+<img src="../img/detroit/slide-2.jpg">
+</div>
+
+<div class="slide">
+<img src="../img/detroit/slide-3.jpg">
+</div>
+
+<div class="slide">
+<img src="../img/detroit/slide-4.jpg">
+</div>
+
+</div>
+
+<div class="media-thumbs">
+
+<label for="m1"><img src="../img/detroit/slide -1.jpg"></label>
+<label for="m2"><img src="../img/detroit/slide-2.jpg"></label>
+<label for="m3"><img src="../img/detroit/slide-3.jpg"></label>
+<label for="m4"><img src="../img/detroit/slide-4.jpg"></label>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="game-sidebar">
+
+<div class="buy-card">
+
+<div class="price">$59.900 COP</div>
+
+<p class="short-desc">
+Toma las riendas del destino de tres androides en una Detroit futurista donde la línea entre la máquina y el ser humano se ha desvanecido.
+</p>
+
+<a class="download-btn" href="../meme/meme-detroit.jpg" download>
+Descargar
+</a>
+
+</div>
+
+<div class="game-about">
+
+<h2>Acerca del juego</h2>
+
+<p>
+Detroit: Become Human es un thriller interactivo de ciencia ficción donde tus decisiones determinan el curso de la historia. A través de los ojos de Connor, un prototipo policial; Kara, una asistente doméstica que busca proteger a una niña; y Markus, el líder de una rebelión robótica, explorarás dilemas morales sobre la libertad y la conciencia. Cada elección que tomes tiene consecuencias reales, pudiendo llevar a tus personajes a la supervivencia o a una muerte definitiva en múltiples finales posibles.
+</p>
+
+<ul class="game-features">
+<li>Narrativa Interactiva</li>
+<li>Toma de Decisiones</li>
+<li>Gráficos Fotorrealistas</li>
+<li>Múltiples Finales</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+<script>
+  // Esperamos a que la página cargue completamente
+  document.addEventListener("DOMContentLoaded", function() {
+    
+    // 1. Seleccionamos todos los botones (inputs radio) del carrusel
+    const radios = document.querySelectorAll('input[name="media"]');
+    
+    // 2. Seleccionamos tu video
+    const video = document.querySelector('.media-slides .slide video');
+
+    // 3. Verificamos que el video exista para no causar errores
+    if (video) {
+      // Le agregamos un 'escuchador' a cada botón
+      radios.forEach(radio => {
+        radio.addEventListener('change', function() {
+          
+          // Si el botón seleccionado NO es el m1 (el del video), pausamos el video
+          if (this.id !== 'm1') {
+            video.pause();
+          }
+          
+        });
+      });
+    }
+    
+  });
+</script>
+</body> </html>

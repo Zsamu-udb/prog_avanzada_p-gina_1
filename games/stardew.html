@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stardew Valley - VideoFreaky</title>
+
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/game.css">
+<link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="header-container">
+
+<div class="logo">VIDEOFREAKY</div>
+
+<nav class="menu">
+<a href="../index.html">Inicio</a>
+<a href="../store.html">Tienda</a>
+<a href="#">Biblioteca</a>
+<a href="../comuni.html">Comunidad</a>
+<a href="#">Noticias</a>
+</nav>
+
+<div class="search">
+<input type="text" placeholder="Buscar juegos">
+</div>
+
+</div>
+
+</header>
+
+<main class="container game-page">
+
+<h1 class="game-title">Stardew Valley</h1>
+
+<div class="game-layout">
+
+<div class="game-media">
+
+<div class="media-carousel">
+
+<input type="radio" name="media" id="m1" checked>
+<input type="radio" name="media" id="m2">
+<input type="radio" name="media" id="m3">
+<input type="radio" name="media" id="m4">
+
+<div class="media-slides">
+
+<div class="slide">
+<video controls preload="metadata">
+<source src="../VIDEO-GAMES/Stardew Valley_ Nintendo Switch 2 Edition – Nintendo Direct 9.12.2025.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="slide">
+<img src="../img/stardew/slide-2.jpg">
+</div>
+
+<div class="slide">
+<img src="../img/stardew/slide-3.jpg">
+</div>
+
+<div class="slide">
+<img src="../img/stardew/slide-4.jpg">
+</div>
+
+</div>
+
+<div class="media-thumbs">
+
+<label for="m1"><img src="../img/stardew/slide-1.jpg"></label>
+<label for="m2"><img src="../img/stardew/slide-2.jpg"></label>
+<label for="m3"><img src="../img/stardew/slide-3.jpg"></label>
+<label for="m4"><img src="../img/stardew/slide-4.jpg"></label>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="game-sidebar">
+
+<div class="buy-card">
+
+<div class="price">$24.000 COP</div>
+
+<p class="short-desc">
+Hereda la vieja parcela agrícola de tu abuelo en Stardew Valley y comienza una nueva vida lejos de la ciudad.
+</p>
+
+<a class="download-btn" href="../meme/meme-stardew valley.jpg" download>
+Descargar
+</a>
+
+</div>
+
+<div class="game-about">
+
+<h2>Acerca del juego</h2>
+
+<p>
+Stardew Valley es un RPG de vida rural y granja que te permite convertir un campo descuidado en un hogar próspero. Aprende a vivir de la tierra, cultiva cosechas de temporada, cría animales y mejora tus habilidades de pesca y minería. Pero no todo es trabajo; únete a la comunidad de Pueblo Pelícano, entabla amistades, asiste a festivales e incluso encuentra a alguien con quien compartir tu vida. Con cientos de opciones de personalización y secretos por descubrir, tú decides cómo pasar cada día en el valle.
+</p>
+
+<ul class="game-features">
+<li>Simulador de Granja</li>
+<li>RPG Social y Romance</li>
+<li>Multijugador Cooperativo</li>
+<li>Estética Pixel Art</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+<script>
+  // Esperamos a que la página cargue completamente
+  document.addEventListener("DOMContentLoaded", function() {
+    
+    // 1. Seleccionamos todos los botones (inputs radio) del carrusel
+    const radios = document.querySelectorAll('input[name="media"]');
+    
+    // 2. Seleccionamos tu video
+    const video = document.querySelector('.media-slides .slide video');
+
+    // 3. Verificamos que el video exista para no causar errores
+    if (video) {
+      // Le agregamos un 'escuchador' a cada botón
+      radios.forEach(radio => {
+        radio.addEventListener('change', function() {
+          
+          // Si el botón seleccionado NO es el m1 (el del video), pausamos el video
+          if (this.id !== 'm1') {
+            video.pause();
+          }
+          
+        });
+      });
+    }
+    
+  });
+</script>
+</body> </html>
