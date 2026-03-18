@@ -3,8 +3,10 @@
     --morado-claro:#c084fc;
     --fondo1:#0a0012;
     --fondo2:#1a0028;
+    --fondo3:#220033;
     --card:#121018;
     --texto:#cfcfcf;
+    --azul-logo:#6aa9ff;
 }
 
 *{
@@ -17,6 +19,7 @@
 body{
     background:linear-gradient(to bottom, #0a0012, #1a0028, #220033);
     color:white;
+    min-height:100vh;
 }
 
 
@@ -27,11 +30,17 @@ body{
     padding:18px 25px;
     background:#08000d;
     border-bottom:2px solid var(--morado);
+    
 }
 
 .logo{
-    font-size:1.8rem;
-    color:#6aa9ff;
+   font-size: 24px;
+    letter-spacing: 3px;
+   
+    background:linear-gradient(90deg, #7c3aed, #38bdf8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    filter: drop-shadow(0 0 5px var(--morado-glow));
 }
 
 .menu{
@@ -84,19 +93,31 @@ body{
 .card{
     padding:20px;
 }
-
+.featured-card{
+    display:flex;
+    gap:30px;
+    align-items:center;
+    justify-content:center;
+    max-width:1000px;
+    margin:0 auto;
+    background:#121018;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 0 20px rgba(168,85,247,0.2);
+}
 
 .featured-image{
-    border-radius:16px;
+    flex:1;
+    border-radius:12px;
     overflow:hidden;
-    display:inline-block;
 }
 
 .featured-image img{
     width:100%;
-    max-width:600px;
-    transition:transform 0.4s ease, box-shadow 0.4s ease;
+    max-width:500px;
+    border-radius:12px;
     display:block;
+    transition:transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .featured-image:hover img{
@@ -105,6 +126,32 @@ body{
         0 10px 25px rgba(0,0,0,0.5),
         0 0 20px rgba(168,85,247,0.6);
 }
+
+.featured-info{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.featured-info h2{
+    font-size:1.8rem;
+    margin-bottom:15px;
+    color:white;
+}
+
+.featured-info p{
+    line-height:1.6;
+    color:#cfcfcf;
+}
+
+.featured-image:hover img{
+    transform:scale(1.05);
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.5),
+        0 0 20px rgba(168,85,247,0.6);
+}
+
 
 .hero-text h2{
     font-size:2.2rem;
@@ -269,6 +316,7 @@ body{
         grid-template-columns:1fr;
     }
 }
+
 
 .login-btn {
   background: #7c3aed;

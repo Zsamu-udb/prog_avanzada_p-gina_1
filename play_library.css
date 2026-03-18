@@ -42,11 +42,16 @@ header {
 
 
 .logo{
-    color:#55aaff;
-    font-size:2rem;
-    font-weight:bold;
-    letter-spacing:2px;
+    
+    font-size: 24px;
+    letter-spacing: 3px;
+   
+    background:linear-gradient(90deg, #7c3aed, #38bdf8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    filter: drop-shadow(0 0 5px var(--morado-glow));
 }
+
 
 .menu{
     display:flex;
